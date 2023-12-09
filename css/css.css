@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner {
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+aside {
+    width: 30px;
+    height: 10vh;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    position: fixed;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 40px;
+
+    .arrow {
+        margin: 14px -2px;
+        font-size: 2.5rem;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+aside:hover {
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    height: 100vh;
+    width: 16%;
+    transform: translate(0);
+    transition: 0.5s;
+
+    .arrow {
+        display: none;
+    }
+
+    .header {
+        display: block;
+
+        .logo {
+            height: 200px;
+            width: 100%;
+            background-image: url(../img/LogoCasino.png);
+            background-size: cover;
+            background-position: center;
+
+        }
+    }
+
+    .nav {
+        background-color: black;
+        display: grid;
+        height: 500px;
+        position: relative;
+
+        .ul {
+            display: flex;
+            flex-direction: column;
+
+            .li {
+                text-align: center;
+                width: 100%;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                height: 100px;
+
+
+                .link {
+                    font-size: 1.2rem;
+                    color: aliceblue;
+                    text-decoration: none;
+                    padding-left: 10px;
+                    position: relative;
+                    top: 40%;
+                }
+            }
+
+            .li:hover {
+                background: linear-gradient(greenyellow, black);
+                height: 100px;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: blueviolet;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .section {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 0;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: ease-in-out .5s;
+    }
+
+    .section:target {
+        opacity: 1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+.section-menu {
+    background-image: url(../img/background-main.png);
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+
+    .contedor-menu-header {
+        height: 95px;
+        background-color: #00000030;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-main {
+            height: 100%;
+
+            .img-logo-main {
+                height: 100%;
+            }
+        }
+
+        .nav-main {
+            text-align: justify;
+            display: flex;
+            justify-content: space-between;
+            width: 45%;
+            padding: 25px;
+
+            .link-main {
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: aliceblue;
+            }
+        }
+
+    }
+}
+
+.conteneder-body {
+    .contenido-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 600px;
+        margin-right: 4%;
+
+        .contenido-introduccion {
+            color: aliceblue;
+            height: 8%;
+            margin-bottom: 40px;
+
+            .h1-main {
+                font-size: 2rem;
+                padding: 0 30px;
+
+            }
+
+        }
+    }
+
+    .mensaje-main {
+        .h3-main {
+            width: 570px;
+            color: aliceblue;
+            text-align: center;
+
+        }
+
+    }
+}
+
+#ahorcado {
+    background-image: url(../img/Ahorcado/background-ahorcado.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contenedorPri-ahorcado {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .contenedorSec-ahorcado {
+
+        .contenedor-h1 {
+            height: 60px;
+            background-color: black;
+            text-align: center;
+            color: aliceblue;
+
+            .title-ahorcado {
+                position: relative;
+                top: 35%;
+            }
+        }
+    }
+
+    .contenedorTer-ahorcado {
+        margin-top: 25px;
+        width: 88%;
+        height: 575px;
+        margin-left: 6%;
+        background-color: #f0f8ff80;
+        border: solid white;
+
+        .botonera-ahorcado {
+            margin-top: 25px;
+
+            .btn {
+                margin-left: 15px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+                padding: 5px;
+                background: linear-gradient(10deg, orange, red);
+            }
+
+            .btn:hover {
+                cursor: pointer;
+                background: linear-gradient(red, orange);
+                box-shadow: 10px 5px 0px 0px #000000;
+            }
+
+            .btn:active {
+                box-shadow: none;
+            }
+        }
+
+        .canvas {
+            margin: 30px 0;
+        }
+
+        .palabra-ahorcado {
+            #palabra_a_adivinar {
+                margin: 15px 0;
+                height: 3em;
+
+                .span {
+                    font-size: 2em;
+                    vertical-align: bottom;
+                    border-bottom: 2px solid black;
+                    width: 30px;
+                    text-align: center;
+                    margin-right: 6px;
+                    display: inline-block;
+                }
+            }
+        }
+
+        #letras {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 7px;
+
+
+            .letra {
+                width: 28px;
+                padding: 6px 0;
+                text-align: center;
+                box-shadow: 3px 3px 0px 0px #000000;
+            }
+
+            .letra:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+
+            .letra:active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+#dados {
+    background-image: url(../img/Dado/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.verde {
+    color: green;
+}
+
+.rojo {
+    color: red;
+}
+
+.contenedor-dados {
+    height: 100%;
+    width: 100%;
+
+    .contenedor-titleDado {
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        color: aliceblue;
+        height: 80px;
+
+        .title-craps {
+            position: relative;
+            top: 30%;
+        }
+    }
+
+    .flex-dados {
+        margin: 20px auto;
+        height: 550px;
+        width: 90%;
+        background-color: #031927bd;
+        border: 2px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .form-craps {
+            margin-top: 35px;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+
+            .label-craps {
+                font-size: 1.3rem;
+                color: white;
+            }
+
+            #usuario {
+                font-size: 1.3rem;
+                height: 40px;
+                width: 40px;
+            }
+
+            #btn-apostar,
+            #btn-reset {
+                background: radial-gradient(violet, blue);
+                height: 45px;
+                width: 90px;
+                border-radius: 10px;
+                padding: 5px;
+                color: aliceblue;
+                font-weight: bold;
+                margin-inline: 1%;
+            }
+
+            #btn-apostar:hover,
+            #btn-reset:hover {
+                background: radial-gradient(blue, violet);
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
+        }
+
+        .title-dado {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contenedor-imgDado {
+            margin-top: 35px;
+            border: 5px solid blanchedalmond;
+        }
+
+        .title-resultado-dado {
+            margin-top: 15px;
+            text-align: center;
+            height: 65px;
+
+            #resultado_dado {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 1.3rem;
+            }
+
+            .puntuacion {
+                color: white;
+                text-decoration: underline;
+            }
+
+            .tamaño-point {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+}
+
+
+#rulet {
+    background-image: url(../img/Rulet/fondo-cesped.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.conteiner-rulet {
+    height: 100%;
+    width: 100%;
+
+    .contenedorTitle-rulet {
+        background-color: black;
+        width: 100%;
+        height: 80px;
+        text-align: center;
+
+        .title-rulet {
+            color: aliceblue;
+            position: relative;
+            top: 35%;
+        }
+    }
+
+    .flex-rulet {
+        background-color: rgba(0, 0, 0, 0.562);
+        border: solid 2px wheat;
+        margin: 15px 10%;
+        height: 570px;
+
+        .h1 {
+            margin-top: 30px;
+            border-bottom: 2px solid greenyellow;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: white;
+            text-align: center;
+        }
+
+        .tablero-Rulet {
+            margin-top: 25px;
+            position: relative;
+            width: 100%;
+            height: 370px;
+            display: grid;
+            place-content: center;
+            margin-bottom: 2px;
+
+            .flecha-ruleta {
+                top: 2px;
+                height: 45px;
+                position: absolute;
+                left: 47%;
+                z-index: 1;
+            }
+
+            .img-ruleta {
+                background: none;
+                height: 350px;
+                width: 350px;
+                filter: brightness(1.2);
+                transform: rotateZ(360deg)
+            }
+        }
+
+        .contenedor-btnRuleta {
+            text-align: center;
+
+            #btn-ruleta {
+                font-size: 1.4rem;
+                font-weight: bolder;
+                color: whitesmoke;
+                height: 80px;
+                width: 120px;
+                background: radial-gradient(red, black);
+                padding: 5px;
+                border-radius: 30px;
+                margin: 15px 0;
+                box-shadow: 10px 8px 0px 0px #000000;
+            }
+
+            #btn-ruleta:hover {
+                background: radial-gradient(black, red);
+                cursor: pointer;
+                opacity: 0.9;
+                transition: opacity 1s ease 0s;
+                box-shadow: 10px 8px 0px 0px #000000;
+            }
+
+            #btn-ruleta:active {
+                box-shadow: none;
+            }
+
+            #resultado_rulet {
+                margin-top: 15px;
+                height: 35px;
+                font-size: 2rem;
+                background-color: cadetblue;
+                color: blanchedalmond;
+                width: 300px;
+                margin: 5px auto;
+            }
+        }
+    }
+}
+
+.blur {
+    animation: blur 10s;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(0.5px);
+    }
+
+    30% {
+        filter: blur(1px);
+    }
+
+    50% {
+        filter: blur(2px);
+    }
+
+    80% {
+        filter: blur(1.5px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}

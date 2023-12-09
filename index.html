@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Casino</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <aside>
+            <span class="material-symbols-outlined arrow">
+                chevron_right
+            </span>
+            <header class="header">
+                <div class="logo"></div>
+                <div class="name_casino"></div>
+            </header>
+            <nav class="nav">
+                <ul class="ul">
+                    <li class="li"><a class="link" href="#ahorcado">Ahorcado</a></li>
+                    <li class="li"><a class="link" href="#dados"> Dados</a></li>
+                    <li class="li"><a class="link" href="#rulet">Ruleta</a></li>
+                    <li class="li">
+                        <a class="link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main">
+            <section class="section-menu">
+                <div class="contedor-menu-header">
+                    <div class="logo-main">
+                        <img class="img-logo-main" src="img/LogoCasino.png" alt="">
+                    </div>
+                    <div class="nav-main">
+                        <a class="link-main" href="">Home</a>
+                        <a class="link-main" href="">About</a>
+                        <a class="link-main" href="">Games</a>
+                        <a class="link-main" href="">Contacts</a>
+                        <a class="link-main" href="">Blog</a>
+                    </div>
+                </div>
+                <div class="conteneder-body">
+                    <div class="contenido-main">
+                        <div class="contenido-introduccion">
+                            <h1 class="h1-main">Best online gambling club of all times</h1>
+                        </div>
+                        <div class="mensaje-main">
+                            <h3 class="h3-main">At Hazard, we provide thousands of players with the best gambling
+                                activities and
+                                discreet gaming experience of online casinos while creating a safe place to play.</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="ahorcado">
+                <div class="contenedorPri-ahorcado">
+                    <div class="contenedorSec-ahorcado">
+                        <div class="contenedor-h1">
+                            <h1 class="title-ahorcado"> AHORCADO </h1>
+                        </div>
+                        <div class="contenedorTer-ahorcado">
+                            <div class="botonera-ahorcado">
+                                <button id="jugar" class="btn"> OBTENER PALABRAS</button>
+                                <button id="reset" class="btn">RESET</button>
+                            </div>
+                            <div class="canvas">
+                                <img id="img-ahorcado" src="img/Ahorcado/ahorcado0.gif" alt="">
+                            </div>
+                            <div class="palabra-ahorcado">
+                                <p id="palabra_a_adivinar">
+                                </p>
+                            </div>
+                            <div id="letras">
+                                <button class="letra">A</button>
+                                <button class="letra">B</button>
+                                <button class="letra">C</button>
+                                <button class="letra">D</button>
+                                <button class="letra">E</button>
+                                <button class="letra">F</button>
+                                <button class="letra">G</button>
+                                <button class="letra">H</button>
+                                <button class="letra">I</button>
+                                <button class="letra">J</button>
+                                <button class="letra">K</button>
+                                <button class="letra">L</button>
+                                <button class="letra">M</button>
+                                <button class="letra">N</button>
+                                <button class="letra">Ñ</button>
+                                <button class="letra">O</button>
+                                <button class="letra">P</button>
+                                <button class="letra">Q</button>
+                                <button class="letra">R</button>
+                                <button class="letra">S</button>
+                                <button class="letra">T</button>
+                                <button class="letra">U</button>
+                                <button class="letra">V</button>
+                                <button class="letra">W</button>
+                                <button class="letra">X</button>
+                                <button class="letra">Y</button>
+                                <button class="letra">Z</button>
+                            </div>
+                            <div>
+                                <p id="resultado"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="dados">
+                <div class="contenedor-dados">
+                    <div class="contenedor-titleDado">
+                        <h1 class="title-craps">Craps</h1>
+                    </div>
+                    <div class="flex-dados">
+                        <form action="" class="form-craps">
+                            <label class="label-craps" for="dado">Ingrese su apuesta </label>
+                            <input step="1" type="number" min="1" max="6" for="dado" id="usuario" />
+                            <button class="hoverBtn_craps" id="btn-apostar">Apostar</button>
+                            <button class="hoverBtn_craps" id="btn-reset">Resetear</button>
+                        </form>
+                        <div class="contenedor-imgDado">
+                            <img id="img-randomDado" src="img/Dado/dado0.jpg" alt="" height="250px" width="250px">
+                        </div>
+                        <div class="title-resultado-dado">
+                            <h2 id="resultado_dado">Resultado</h2>
+                            <h3 class="puntuacion">Puntuacion:</h3>
+                            <table style="border:2px solid blue; margin: auto; margin-top: 10px;
+                            ">
+                                <thead style="background-color: black">
+                                    <td class="verde tamaño-point">GANADAS</td>
+                                    <td class="rojo tamaño-point">PERDIDAS</td>
+                                </thead>
+                                <tbody style="background-color: aliceblue">
+                                    <td><span class="verde" id="vecesGanadas"> 0</span></td>
+                                    <td><span class="rojo" id="vecesPerdidas"> 0 </span></td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="rulet">
+                <div class="conteiner-rulet">
+                    <div class="contenedorTitle-rulet">
+                        <h1 class="title-rulet">Ruleta</h1>
+                    </div>
+                    <div class="flex-rulet">
+                        <div class="tablero-Rulet">
+                            <img src="img/Rulet/flecha.png" alt="flecha" class="flecha-ruleta" />
+                            <img class="img-ruleta" src="img/Rulet/ruleta.png" alt="rulet" id="ruleta" />
+                        </div>
+                        <div class="contenedor-btnRuleta">
+                            <button id="btn-ruleta">Jugar</button>
+                            <h3 id="resultado_rulet">Resultado</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/ahorcado.js"></script>
+</body>
+
+</html>
