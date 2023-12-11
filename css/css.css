@@ -9,8 +9,6 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-
 aside {
     width: 30px;
     height: 10vh;
@@ -25,7 +23,7 @@ aside {
     border-radius: 40px;
 
     .arrow {
-        margin: 14px -2px;
+        margin: 14px -4px;
         font-size: 2.5rem;
     }
 
@@ -76,7 +74,6 @@ aside:hover {
                 width: 100%;
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                 height: 100px;
-
 
                 .link {
                     font-size: 1.2rem;
@@ -159,7 +156,58 @@ aside:hover {
                 color: aliceblue;
             }
         }
+    }
+}
 
+
+div .link-game {
+    cursor: pointer;
+
+    .contenedor-nav-main {
+        display: none;
+        animation: transform 0.5s ease;
+    }
+}
+
+@keyframes transform {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+div .link-game:hover {
+    z-index: 5;
+
+    .contenedor-nav-main {
+        display: flex;
+        text-align: justify;
+        width: 100px;
+        background-color: black;
+        height: 72px;
+        flex-direction: column;
+        position: absolute;
+        right: 20%;
+        bottom: 80.5%;
+    }
+
+    .contenedor-nav-main a {
+        color: beige;
+        border-bottom: 1px solid white;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-top: 4px;
+        width: 100%;
+    }
+
+    .contenedor-nav-main a:hover {
+        background-color: #22175b;
+        color: wheat;
     }
 }
 
@@ -180,9 +228,7 @@ aside:hover {
             .h1-main {
                 font-size: 2rem;
                 padding: 0 30px;
-
             }
-
         }
     }
 
